@@ -1,0 +1,12 @@
+name: CoT_report
+title: CoT_report
+username: bigmaestro
+account: bigmaestro
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10816293
+bundleId: 8059704
+url: https://bigmaestro.shinyapps.io/CoT_report/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

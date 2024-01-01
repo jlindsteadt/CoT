@@ -18,10 +18,20 @@
 ## install.packages('attachment') # if needed.
 attachment::att_amend_desc()
 
+
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module(name = "name_of_module1", with_test = TRUE) # Name of the module
-golem::add_module(name = "name_of_module2", with_test = TRUE) # Name of the module
+golem::add_module(name = "data_import", with_test = TRUE) # Name of the module
+golem::add_module(name = "CoT", with_test = TRUE) # Name of the module
+
+# Add Packages
+usethis::use_package('Quandl')
+usethis::use_package('dplyr')
+usethis::use_package('ggplot2')
+usethis::use_package('shinydashboard')
+usethis::use_package('tidyr')
+usethis::use_package('timetk')
+usethis::use_package('forcats')
 
 ## Add helper functions ----
 ## Creates fct_* and utils_*
@@ -37,7 +47,7 @@ golem::add_sass_file("custom")
 
 ## Add internal datasets ----
 ## If you have data in your package
-usethis::use_data_raw(name = "my_dataset", open = FALSE)
+usethis::use_data_raw(name = "CoT_data", open = FALSE)
 
 ## Tests ----
 ## Add one line by test you want to create
