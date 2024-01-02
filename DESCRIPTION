@@ -11,6 +11,7 @@ Imports:
     forcats,
     ggplot2,
     golem (>= 0.4.1),
+    pkgload,
     Quandl,
     shiny (>= 1.8.0),
     shinydashboard,

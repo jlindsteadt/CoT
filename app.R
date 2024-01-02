@@ -4,10 +4,4 @@
 
 pkgload::load_all(export_all = FALSE,helpers = FALSE,attach_testthat = FALSE)
 options( "golem.app.prod" = TRUE)
-
-# profvis(
-# print(
-    CoT::run_app() # add parameters here (if any)
-# )
-# )
-
+CoT::run_app() # add parameters here (if any)
