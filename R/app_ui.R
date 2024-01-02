@@ -11,8 +11,8 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic
     fluidPage(
-      #mod_CoT_ui("CoT_1"),
-      mod_data_import_ui("data_import")
+      mod_CoT_ui("CoT_1")#,
+      #mod_data_import_ui("data_import")
     )
   )
 }
