@@ -23,12 +23,10 @@ mod_data_import_server <- function(id, r){
     ns <- session$ns
 
     observe(
-      #r$CoT_data <- readRDS('~/CoT/data-raw/CoT_data_raw.RDS')
-      #r$CoT_data <- data(CoT_data)
       r$CoT_data <- CoT_data_fetch
     )
 
-    Quandl.api_key("4uhW7tJsNypwPsnidegi")
+
 
     output$test <- renderPrint({
       x <- reactiveValuesToList(r)
