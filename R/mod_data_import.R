@@ -36,32 +36,33 @@ mod_data_import_server <- function(id, r){
 
     #### CoT - Commitment of Traders Report ####
     #CoT_data_fetch <- data(CoT_data)
-    CoT_data_fetch <- Quandl(c(
-        'CFTC/134741_F_ALL', # SOFR
-        'CFTC/042601_F_ALL', # 2yr T Note
-        'CFTC/044601_F_ALL', # 5yr T Note
-        'CFTC/043602_F_ALL',  # 10yr T Note
-        'CFTC/020601_F_ALL', # 30yr Bond
-        'CFTC/134741_F_L_ALL', # SOFR Legacy format
-        'CFTC/042601_F_L_ALL', # 2yr T Note Legacy format
-        'CFTC/044601_F_L_ALL', # 5yr T Note Legacy format
-        'CFTC/043602_F_L_ALL',  # 10yr T Note Legacy format
-        'CFTC/020601_F_L_ALL', # 30yr Bond Legacy format
-        'CFTC/097741_F_ALL', # Japanese Yen
-        'CFTC/097741_F_L_ALL', # Japanese Yen Legacy format
-        'CFTC/092741_F_ALL', # Swiss Franc
-        'CFTC/092741_F_L_ALL',
-        'CFTC/232741_F_ALL', # Aussie Dollar
-        'CFTC/232741_F_L_ALL',
-        'CFTC/090741_F_ALL', # Canadian Dollar
-        'CFTC/090741_F_L_ALL',
-        'CFTC/112741_F_ALL', # New Zealand Dollar
-        'CFTC/112741_F_L_ALL',
-        'CFTC/095741_F_ALL', # Mexican Peso
-        'CFTC/095741_F_L_ALL',
-        'CFTC/099741_F_ALL', # Euro
-        'CFTC/099741_F_L_ALL',
-        'CFTC/096742_F_ALL'#, # British Pound
+    CoT_data_fetch <- readRDS('./data-raw/CoT_data_raw.RDS')
+    # CoT_data_fetch <- Quandl(c(
+    #     'CFTC/134741_F_ALL', # SOFR
+    #     'CFTC/042601_F_ALL', # 2yr T Note
+    #     'CFTC/044601_F_ALL', # 5yr T Note
+    #     'CFTC/043602_F_ALL',  # 10yr T Note
+    #     'CFTC/020601_F_ALL', # 30yr Bond
+    #     'CFTC/134741_F_L_ALL', # SOFR Legacy format
+    #     'CFTC/042601_F_L_ALL', # 2yr T Note Legacy format
+    #     'CFTC/044601_F_L_ALL', # 5yr T Note Legacy format
+    #     'CFTC/043602_F_L_ALL',  # 10yr T Note Legacy format
+    #     'CFTC/020601_F_L_ALL', # 30yr Bond Legacy format
+    #     'CFTC/097741_F_ALL', # Japanese Yen
+    #     'CFTC/097741_F_L_ALL', # Japanese Yen Legacy format
+    #     'CFTC/092741_F_ALL', # Swiss Franc
+    #     'CFTC/092741_F_L_ALL',
+    #     'CFTC/232741_F_ALL', # Aussie Dollar
+    #     'CFTC/232741_F_L_ALL',
+    #     'CFTC/090741_F_ALL', # Canadian Dollar
+    #     'CFTC/090741_F_L_ALL',
+    #     'CFTC/112741_F_ALL', # New Zealand Dollar
+    #     'CFTC/112741_F_L_ALL',
+    #     'CFTC/095741_F_ALL', # Mexican Peso
+    #     'CFTC/095741_F_L_ALL',
+    #     'CFTC/099741_F_ALL', # Euro
+    #     'CFTC/099741_F_L_ALL',
+    #     'CFTC/096742_F_ALL', # British Pound
         # 'CFTC/096742_F_L_ALL',
         # 'CFTC/13874A_F_ALL', # S&P e-mini
         # 'CFTC/13874A_F_L_ALL',
@@ -121,7 +122,7 @@ mod_data_import_server <- function(id, r){
         # 'CFTC/061641_F_L_ALL',
         # 'CFTC/057642_F_ALL', # Live Cattle
         # 'CFTC/057642_F_L_ALL'
-      ))
+      #))
   })
 }
 
